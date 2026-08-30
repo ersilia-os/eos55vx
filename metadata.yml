@@ -2,42 +2,37 @@ Identifier: eos55vx
 Slug: cocograph-formula
 Status: In progress
 Title: CoCoGraph Formula-Preserving Generation
-Description: Given a molecule, generates alternative chemically valid structures
-  sharing its exact atomic composition (molecular formula), via a constrained 
-  graph diffusion process that guarantees 100% validity by design. Useful for 
-  exploring new isomers and analogues within a fixed elemental composition, 
-  producing molecules whose physicochemical property distributions closely match
-  real, drug-like chemical space.
+Description: Generates 100 new, chemically valid molecules that share the exact
+  atomic composition of an input compound, using a constrained graph diffusion
+  process trained on 2.25 million molecules from PubChem, ChEMBL, ZINC and NIST.
+  Validity is guaranteed by design rather than learned, since every diffusion
+  step swaps bonds while preserving atom valences. In a blind test, 121 organic
+  chemistry experts correctly distinguished generated from real molecules only
+  62% of the time. Training and inference are restricted to molecules of 5-70
+  total atoms, hydrogens included.
 Deployment:
   - Local
-  - Online
-Source: Local, Online
-Source Type: Internal, Replicated, External
-Task: Annotation, Representation, Sampling
-Subtask: Property calculation or prediction, Activity prediction, Featurization,
-  Projection, Similarity search, Generation
+Source: Local
+Source Type: External
+Task: Sampling
+Subtask: Generation
 Input:
   - Compound
 Input Dimension: 1
 Output:
-  - Value
-  - Score
   - Compound
-  - Text
-Output Dimension: 1
-Output Consistency: Fixed, Variable
-Interpretation: The output of this template model should be interpreted like 
-  this.
+Output Dimension: 100
+Output Consistency: Variable
+Interpretation: 100 newly generated molecules sharing the input compound's exact
+  molecular formula and valid chemical structure.
 Tag:
   - Compound generation
   - Chemical graph model
 Biomedical Area:
-  - Biomedical Area 1
-  - Biomedical Area 2
+  - Any
 Target Organism:
-  - Target Organism 1
-  - Target Organism 2
-Publication Type: Peer reviewed, Preprint, Other
+  - Any
+Publication Type: Peer reviewed
 Publication Year: 2026
 Publication: https://doi.org/10.1038/s42256-026-01229-5
 Source Code: https://doi.org/10.5281/zenodo.18940151
