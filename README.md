@@ -2,6 +2,7 @@
 
 Generates 100 new, chemically valid molecules that share the exact atomic composition of an input compound, using a constrained graph diffusion process trained on 2.25 million molecules from PubChem, ChEMBL, ZINC and NIST. Validity is guaranteed by design rather than learned, since every diffusion step swaps bonds while preserving atom valences. In a blind test, 121 organic chemistry experts correctly distinguished generated from real molecules only 62% of the time. Training and inference are restricted to molecules of 5-70 total atoms, hydrogens included.
 
+This model was incorporated on 2026-08-28.
 
 
 ## Information
@@ -23,7 +24,7 @@ Generates 100 new, chemically valid molecules that share the exact atomic compos
 ### Output
 - **Output Dimension:** `100`
 - **Output Consistency:** `Variable`
-- **Interpretation:** 100 newly generated molecules sharing the input compound's exact molecular formula and valid chemical structure.
+- **Interpretation:** 100 newly generated molecules sharing the input compounds exact molecular formula and valid chemical structure.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
@@ -43,8 +44,11 @@ _10 of 100 columns are shown_
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `External`
+- **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos55vx.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos55vx.zip)
 
 ### Resource Consumption
+- **Model Size (Mb):** `52`
+- **Environment Size (Mb):** `1759`
 
 
 ### References
