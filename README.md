@@ -2,7 +2,8 @@
 
 Generates 100 new, chemically valid molecules that share the exact atomic composition of an input compound, using a constrained graph diffusion process trained on 2.25 million molecules from PubChem, ChEMBL, ZINC and NIST. Validity is guaranteed by design rather than learned, since every diffusion step swaps bonds while preserving atom valences. In a blind test, 121 organic chemistry experts correctly distinguished generated from real molecules only 62% of the time. Training and inference are restricted to molecules of 5-70 total atoms, hydrogens included.
 
-This model was incorporated on 2026-08-28.Last packaged on 2026-08-31.
+This model was incorporated on 2026-08-28.
+Last packaged on 2026-08-31.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 100 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos55vx](https://hub.docker.com/r/ersiliaos/eos55vx)
 - **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos55vx.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos55vx.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos55vx_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos55vx_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `52`
